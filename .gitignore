@@ -1,0 +1,15 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# Jetbrains IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
