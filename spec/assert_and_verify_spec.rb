@@ -12,7 +12,7 @@ describe AssertAndVerify do
       let(:statement) { proc { 1 + 1 == 3 } }
 
       it 'should raise AssertionFailedError' do
-        expect { assertion_call }.to raise_error Test::Unit::AssertionFailedError
+        expect { assertion_call }.to raise_error(Test::Unit::AssertionFailedError, /#{fail_msg}/)
       end
     end
 
