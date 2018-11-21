@@ -1,7 +1,17 @@
 language: ruby
 rvm:
-- 2.5.3
+- 2.5.1
 
 script:
 - bundle exec rake spec
 - bundle exec rake build
+
+deploy:
+  provider: releases
+  api_key:
+    secure: "CKmHlCpLEdvF8Db21MX0ZPQgfcFZ5JlBFS0tnJ51BtNX2NIq2dTS1WrqrpscN9dVMFYEY0kco8Kwk/HH81hEGd/9fVGRoFTNhK1j6y5lovyUZGt0HR6tVYQc+p/IzYpQf4zQZS1P9uiD++edKk+VsXtC2YtHohy6MJ8BibmHhLeB7arSyk+wqmOv3Q6zTZAjBIuBaazJ+UcfDpthzr+5lczacooT9vHOcIgkOfhdUrq8kqZ6kKC3hFstyiyxrgYDdidV7fguxjjN5rv5x3E/iU2n/fXcn4xT4eQ30hfkei/dqZnIYJagAD+XPqn7+JG8YLfA1GWuxGHVLb/B9XDMQav2aiAXu5kqroyBD8s2ASGW8Ohhl+PhQC7KasvkGBCPD6s4CkkH9M3Fu0atGwX4SblQS5zRfgeB2bt4lMuQNSRee4sjsYT+pzohyG/kOFAWXE1AyrpTe35Dg5beK7qG9BGOv2FT9tyAhckLxBKk1Lj6ZGjGqce8hDaFDJGGJ3KROyi6RtRcQfYDeg4gsi4KuRpL4+jKad46m/eCWOaDRJlrVjYq3bLnDv1BjKC5KM2UFyIm4vUKOx4GoZQl9YqA/VAAPS3V4X/mrwGX6EhZU4y2ymbq/HKOb8aGHHyKnQRHS1G9eCLnNtz87rUgjI8cDERySjDPJrM2mCIZGcYi0Rc="
+  file_glob: true
+  file: 'pkg/*.gem'
+  skip_cleanup: true
+  on:
+    tags: true

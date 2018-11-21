@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    assert_and_verify (0.1.0)
+    assert_and_verify (0.0.1)
       test-unit (~> 3.2.0)
 
 GEM
