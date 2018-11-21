@@ -1,0 +1,6 @@
+- name: run_tests
+  service: assert_and_verify
+  command: bundle exec rake spec
+- name: build_gem
+  service: assert_and_verify
+  command: bundle exec rake build

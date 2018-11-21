@@ -1,0 +1,4 @@
+assert_and_verify:
+  build:
+    image: beetlejuice/assert_and_verify
+    dockerfile: Dockerfile
