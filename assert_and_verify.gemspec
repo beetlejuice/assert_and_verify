@@ -22,6 +22,7 @@ Gem::Specification.new do |spec|
     assert_and_verify.gemspec
     lib/assert_and_verify.rb
     lib/assert_and_verify/version.rb
+    spec/assert_and_verify_spec.rb
   ]
   spec.require_paths = ["lib"]
 
@@ -29,4 +30,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 3.2"
+  spec.add_development_dependency "rspec_junit_formatter", "~> 0.4"
+  spec.add_development_dependency "pry-byebug", "~> 3.6"
 end
